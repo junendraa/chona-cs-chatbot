@@ -1,0 +1,10 @@
+# Rahasia: API key tidak boleh ikut ke GitHub
+.env
+
+# Lingkungan Python
+.venv/
+__pycache__/
+*.pyc
+
+# Riwayat chat bisa berisi data pribadi pembeli
+riwayat/

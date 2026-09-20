@@ -1,0 +1,50 @@
+{
+  "aplikasi": "Chona CS Chatbot",
+  "disimpan_pada": "2026-09-13T16:28:29",
+  "pengaturan": {
+    "model": "openai/gpt-oss-20b",
+    "temperature": 0.4,
+    "panjang": "sedang",
+    "stream": true
+  },
+  "statistik": {
+    "pesan_user": 3,
+    "pesan_bot": 3,
+    "topik": {
+      "Pembayaran": 2,
+      "Order & PO": 1
+    },
+    "request_berhasil": 4,
+    "request_gagal": 0,
+    "token_prompt": 4678,
+    "token_jawaban": 446,
+    "token_berpikir": 81,
+    "rata_rata_detik": 0.74
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "halo kak, aku mau ikut PO tripleS yang lagi buka. caranya gimana?"
+    },
+    {
+      "role": "assistant",
+      "content": "Halo kak!  \n1. Buka daftar PO di gobychona.store/po dan pilih batch TripleS yang sedang aktif.  \n2. Klik “Order” dan isi form di gobychona.store/order.  \n3. Setelah submit, cek My Profile (ikon profil kanan atas) untuk status pembayaran dan tagihan QRIS/transfer.  \n4. Lakukan pembayaran sesuai nominal yang tertera, lalu tunggu konfirmasi admin.  \n\nSemoga sukses! 🚀"
+    },
+    {
+      "role": "user",
+      "content": "totalnya nanti 450 ribu, bayarnya pakai apa?"
+    },
+    {
+      "role": "assistant",
+      "content": "Total Rp450.000, kak.  \n- Karena lebih dari Rp300.000, pembayaran lewat transfer BCA.  \n- Di halaman pembayaran akan ada nomor rekening dan kode unik 2 digit (misal 12) yang sudah termasuk dalam nominal.  \n- Pastikan membayar persis angka yang tertera, jangan dibulatkan.  \n\nSetelah transfer, cek status di My Profile dan hubungi admin kalau ada kendala. 🚀"
+    },
+    {
+      "role": "user",
+      "content": "eh tapi yang tadi aku udah terlanjur transfer dibulatkan jadi 450.000 pas, gimana dong?"
+    },
+    {
+      "role": "assistant",
+      "content": "Kalau sudah transfer Rp450.000 (tanpa kode unik), tetap simpan bukti transfer.  \nKak, hubungi admin lewat WhatsApp +62 821-6584-6592 atau ketik `/admin` di chat ini, lalu beri ringkasan pembayaran.  \nAdmin akan cek manual dan bantu selesaikan.  \n\nSemoga cepat teratasi! 😊"
+    }
+  ]
+}
