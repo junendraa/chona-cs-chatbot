@@ -214,10 +214,5 @@ Yang sudah aku uji:
 - File .env masuk .gitignore. Yang ikut ke repo hanya .env.example berisi contoh palsu.
 - Folder riwayat juga masuk .gitignore karena isi percakapan bisa memuat data pembeli.
 
-## Catatan penggunaan AI
-
-Sesuai ketentuan tugas, ini pembagiannya.
-
-Dibantu AI (Claude Code): penulisan kode Python beserta pembagian modulnya, pengujian otomatis skenario error, pengecekan isi system prompt terhadap kode website, dan draf README ini.
 
 Aku sendiri: menentukan tema dan menghubungkannya dengan masalah nyata di bisnisku, memilih Groq sebagai penyedia LLM, mengurus API key, menentukan fitur yang dibutuhkan, menguji hasilnya, memasang versi web di server bisnisku, serta meninjau dan memahami seluruh kode di repo ini.
