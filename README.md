@@ -1,18 +1,18 @@
 # Chona CS - Chatbot Customer Service GO BY CHONA
 
-Chatbot ini aku buat untuk tugas Membangun Chatbot AI, tapi tidak berhenti di tugas. Aku pakai untuk bisnisku sendiri, GO BY CHONA, jasa group order merchandise K-pop dari Korea, China, Jepang, Thailand, dan Filipina.
+Chatbot ini saya buat untuk tugas Membangun Chatbot AI, tapi tidak berhenti di tugas. Saya pakai untuk bisnisku sendiri GO BY CHONA, jasa group order merchandise kpop dari Korea, China, Jepang, Thailand, dan Filipina.
 
-Versi webnya sudah online dan bisa langsung dicoba di https://gobychona.store/id/live-cs (halaman Live CS, jalan di server sendiri, bukan demo Streamlit). Isi repo ini adalah versi terminal sesuai ketentuan tugas, dan logika yang sama sudah aku pasang di website tersebut.
+Versi webnya sudah online dan bisa langsung dicoba di https://gobychona.store/id/live-cs (halaman Live CS, jalan di server sendiri, bukan demo Streamlit). Isi repo ini adalah versi terminal sesuai ketentuan tugas, dan logika yang sama sudah saya pasang di website tersebut.
 
 ## Kenapa temanya customer service
 
-Tiap hari pertanyaan yang masuk ke adminku hampir selalu sama: cara order, bayarnya gimana, barang sampai kapan, dan cara refund. Sebelumnya halaman Live CS di websiteku pakai Gemini API, tapi kuotanya cepat habis dan akhirnya mati. Waktu dapat tugas ini, sekalian aku bangun ulang chatbotnya memakai Groq API dengan pemakaian token yang jauh lebih hemat.
+Tiap hari pertanyaan yang masuk ke adminku hampir selalu sama: cara order, bayarnya gimana, barang sampai kapan, dan cara refund. Sebelumnya halaman Live CS di websiteku pakai Gemini API, tapi kuotanya cepat habis dan akhirnya mati. Waktu dapat tugas ini, sekalian saya bangun ulang chatbotnya memakai Groq API dengan pemakaian token yang jauh lebih hemat.
 
-Tiga hal yang aku pegang waktu merancang:
+Tiga hal yang saya pegang waktu merancang:
 
-1. Jujur lebih penting daripada terlihat pintar. Chatbot ini tidak punya akses ke database pesanan, jadi aku larang dia mengarang status pesanan, nominal, atau nomor resi. Pertanyaan seperti itu diarahkan ke halaman My Profile atau ke admin.
+1. Jujur lebih penting daripada terlihat pintar. Chatbot ini tidak punya akses ke database pesanan, jadi syaa larang dia mengarang status pesanan, nominal, atau nomor resi. Pertanyaan seperti itu diarahkan ke halaman My Profile atau ke admin.
 2. Hemat token. Versi lama mengirim ulang salam pembuka yang panjang di setiap pesan, batas jawabannya 10.000 token, dan modelnya disuruh menjawab minimal 2-3 paragraf. Di sini yang dikirim hanya 6 tanya-jawab terakhir, panjang jawaban dibatasi, dan salam pembuka tidak pernah ikut dikirim ke model.
-3. Konsisten. Temperature aku set 0.4. Kebijakan toko harus dijelaskan sama tiap kali ditanya, bukan berubah-ubah.
+3. Konsisten. Temperature saya set 0.4. Kebijakan toko harus dijelaskan sama tiap kali ditanya, bukan berubah-ubah.
 
 ## Ketentuan tugas dan letaknya di kode
 
@@ -23,7 +23,7 @@ Tiga hal yang aku pegang waktu merancang:
 - Penanganan error: llm.py, mulai dari API key salah, rate limit, timeout, koneksi putus, model tidak ada, sampai Ctrl+C waktu jawaban sedang mengalir
 - Perintah khusus: ada 13, sedangkan syarat minimalnya 2
 
-Di luar syarat minimal, aku tambahkan streaming, simpan dan muat riwayat ke JSON, statistik percakapan, pengaturan model, temperature, dan panjang jawaban, handoff ke admin lewat WhatsApp, serta versi web yang sudah dipakai di bisnisku.
+Di luar syarat minimal, saya tambahkan streaming, simpan dan muat riwayat ke JSON, statistik percakapan, pengaturan model, temperature, dan panjang jawaban, handoff ke admin lewat WhatsApp, serta versi web yang sudah dipakai di bisnisku.
 
 ## Cara menjalankan
 
@@ -198,7 +198,7 @@ Beberapa hal yang berbeda dari versi terminal:
 
 ## Pengujian
 
-Yang sudah aku uji:
+Yang sudah saya uji:
 
 - Percakapan beberapa giliran yang merujuk pesan sebelumnya, konteksnya tetap nyambung.
 - Pertanyaan di luar tema dan usaha membocorkan system prompt, keduanya ditolak.
@@ -208,11 +208,3 @@ Yang sudah aku uji:
 - /muat dengan file JSON rusak, file ber-BOM, format list dari notebook kelas, dan nama file berisi ../../
 - Keempat model chat Groq, semuanya menjawab tanpa bocoran tag think.
 
-## Keamanan API key
-
-- API key dibaca dari file .env memakai python-dotenv, tidak pernah ditulis di dalam kode.
-- File .env masuk .gitignore. Yang ikut ke repo hanya .env.example berisi contoh palsu.
-- Folder riwayat juga masuk .gitignore karena isi percakapan bisa memuat data pembeli.
-
-
-Aku sendiri: menentukan tema dan menghubungkannya dengan masalah nyata di bisnisku, memilih Groq sebagai penyedia LLM, mengurus API key, menentukan fitur yang dibutuhkan, menguji hasilnya, memasang versi web di server bisnisku, serta meninjau dan memahami seluruh kode di repo ini.
