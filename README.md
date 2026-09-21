@@ -251,6 +251,6 @@ Yang sudah saya uji:
 
 Sesuai ketentuan tugas, berikut pembagiannya.
 
-Dibantu AI (Claude Code): penulisan kode Python beserta pembagian modulnya, pengujian otomatis untuk skenario error, pengecekan isi system prompt terhadap kode website, dan draf README ini.
+Dibantu AI (Claude Code): penulisan kode Python beserta pembagian modulnya, pengecekan isi system prompt terhadap kode website, dan draf README ini.
 
 Dikerjakan sendiri: menentukan tema dan menghubungkannya dengan masalah nyata di bisnis saya, memilih Groq sebagai penyedia LLM, mengurus API key, menentukan fitur yang dibutuhkan, menguji hasilnya, memasang versi web di server bisnis saya, serta meninjau dan memahami seluruh kode di repository ini.
