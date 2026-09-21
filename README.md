@@ -1,5 +1,7 @@
 # Chona CS - Chatbot Customer Service GO BY CHONA
 
+![Uploading image.png…]()
+
 Program ini saya buat untuk tugas Membangun Chatbot AI. Selain untuk tugas, chatbot ini saya pakai untuk bisnis saya sendiri, GO BY CHONA, yaitu jasa group order merchandise K-pop dari Korea, China, Jepang, Thailand, dan Filipina.
 
 Versi webnya sudah online dan bisa Bapak/Ibu coba langsung di https://gobychona.store/id/live-cs (halaman Live CS). Website tersebut berjalan di server saya sendiri memakai Next.js, nginx, dan pm2, jadi bukan demo Streamlit. Isi repository ini adalah versi terminal sesuai ketentuan tugas, dan logika yang sama sudah saya terapkan di website itu.
